@@ -22,6 +22,7 @@ app.post('/chatbot', async (req, res) => {
   const response = await openai.chat.completions.create({
     messages: [
       // We give the chatbot a role with some content to determine how it will behave
+      // On content we can set our bot personality.
       {
         role: 'system',
         content: 'You are a helpful assistant.',
